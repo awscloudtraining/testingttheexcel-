@@ -1,0 +1,74 @@
+Metadata:
+  'AWS::CloudFormation::Designer':
+    24699b48-abcf-4075-8cf0-7a7cdeccd5ad:
+      size:
+        width: 380
+        height: 350
+      position:
+        x: -510
+        'y': -250
+      z: 0
+      embeds:
+        - e15ca474-6565-43ad-90c1-0f17c7171ae3
+    e15ca474-6565-43ad-90c1-0f17c7171ae3:
+      size:
+        width: 250
+        height: 240
+      position:
+        x: -390
+        'y': -160
+      z: 1
+      parent: 24699b48-abcf-4075-8cf0-7a7cdeccd5ad
+      embeds:
+        - ae2b5d72-c6bb-487e-9b21-e362e863c124
+        - c029b3ba-6374-4e24-be02-117f14f7a7f5
+      iscontainedinside:
+        - 24699b48-abcf-4075-8cf0-7a7cdeccd5ad
+    ae2b5d72-c6bb-487e-9b21-e362e863c124:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -350
+        'y': -100
+      z: 2
+      parent: e15ca474-6565-43ad-90c1-0f17c7171ae3
+    c029b3ba-6374-4e24-be02-117f14f7a7f5:
+      size:
+        width: 60
+        height: 60
+      position:
+        x: -250
+        'y': -30
+      z: 2
+      parent: e15ca474-6565-43ad-90c1-0f17c7171ae3
+      iscontainedinside:
+        - e15ca474-6565-43ad-90c1-0f17c7171ae3
+Resources:
+  EC2VPC3RLAQ:
+    Type: 'AWS::EC2::VPC'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: 24699b48-abcf-4075-8cf0-7a7cdeccd5ad
+  EC2S55MGZ:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref EC2VPC3RLAQ
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: e15ca474-6565-43ad-90c1-0f17c7171ae3
+  EC2SG2T245:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties: {}
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: ae2b5d72-c6bb-487e-9b21-e362e863c124
+  EC2I1IREC:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      NetworkInterfaces:
+        - SubnetId: !Ref EC2S55MGZ
+    Metadata:
+      'AWS::CloudFormation::Designer':
+        id: c029b3ba-6374-4e24-be02-117f14f7a7f5
