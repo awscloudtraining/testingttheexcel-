@@ -65,7 +65,7 @@ Resources:
       'AWS::CloudFormation::Designer':
         id: ae2b5d72-c6bb-487e-9b21-e362e863c124
   EC2I1IREC:
-    Type: 'AWS::EC2::Instance'
+    Type: 'AWS::EC2::Instance'lzcmvkmdfkmvkmfdkv
     Properties:
       NetworkInterfaces:
         - SubnetId: !Ref EC2S55MGZ
